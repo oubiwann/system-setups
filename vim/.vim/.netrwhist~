@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/oubiwann/lab/BlueLibris/prototype-webapp'
+let g:netrw_dirhist_2='/Users/oubiwann/lab/BlueLibris'
+let g:netrw_dirhist_3='/Users/oubiwann/lab/BlueLibris/sandboxen'
+let g:netrw_dirhist_4='/Users/oubiwann/lab/BlueLibris/sandboxen/oubiwann'
+let g:netrw_dirhist_5='/Users/oubiwann/lab/BlueLibris/sandboxen/oubiwann/brilis_gae'
+let g:netrw_dirhist_6='/Users/oubiwann/lab/BlueLibris/sandboxen/oubiwann/brilis_gae/data'
+let g:netrw_dirhist_7='/Users/oubiwann/Library/Application Support/Tunnelblick/Configurations/ndn-x509.tblk/Contents/Resources'
+let g:netrw_dirhist_8='/Users/oubiwann/.mutt/servers/dreamhost-gmail'
+let g:netrw_dirhist_9='/Users/oubiwann/.mutt/servers/personal-gmail'

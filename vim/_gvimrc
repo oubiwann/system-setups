@@ -1,0 +1,24 @@
+colorscheme duncan
+set guifont=Monospace\ 8
+":so ~/.vim/syntax/python.vim
+"" Setup Line Folding
+:set foldmethod=indent
+"nmap \sh :source ~/vimsh.vim<CR>
+cmap tree VTreeExplore<CR>
+"cmap bitchx VimShNewBuf bitchx_shell<CR>bitchx<CR><CR>
+"cmap python VimShNewBuf python_shell<CR>python<CR><CR>
+":30vne
+:wincmd l
+:new
+:vne
+:wincmd j
+:vne
+:vne
+nmap <C-S-V> "+gp
+vmap <C-S-V> "+gp
+"imap <C-S-V> "+gp
+"nmap <C-S-V> ]p<ESC>wa
+"imap <S-C-V><ESC><S-C-V>i
+nmap <C-S-X> "+x
+vmap <C-S-X> "+x
+vmap <C-S-C> "+y

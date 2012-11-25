@@ -1,0 +1,6 @@
+This is my TODO list:
+ * INPROGRESS - 
+ * BLOCKED - weee!
+ * DONE - nice!
+ * POSTPONED - gonna work on this later
+ * WONTDO - this one's bogus
