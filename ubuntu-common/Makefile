@@ -21,4 +21,7 @@ clojure:
 clojure clojure-contrib \
 leiningen
 
+vbox-tools: dev
+	cd /media/*/VBOX* && ./VBoxLinuxAdditions.run
+
 install: dev
