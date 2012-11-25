@@ -7,3 +7,5 @@ lubuntu-awesome: ubuntu-common
 lubuntu-clfswm: ubuntu-common
 	cd ubuntu-common && make lisp
 	cd lubuntu-clfswm && make install
+
+.PHONY: ubuntu-common lubuntu-awesome lubuntu-clfswm
