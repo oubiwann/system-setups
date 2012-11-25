@@ -1,5 +1,6 @@
 dev:
-	sudo apt-get install build-essential \
+	sudo apt-get install \
+build-essential autoconf automake libtool \
 vim vim-common vim-gui-common vim-runtime vim-gtk vim-nox \
 vim-scripts \
 vim-doc
