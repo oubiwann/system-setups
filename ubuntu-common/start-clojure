@@ -1,0 +1,9 @@
+BIN=/usr/local/clojure-1.4.0
+CLOJURE=${BIN}/clojure-1.4.0.jar
+rlwrap \
+  --command=clojure \
+  --prompt-colour=YELLOW \
+  --histsize=100000 \
+  -t Clojure \
+  --remember \
+  java -cp $CLOJURE clojure.main

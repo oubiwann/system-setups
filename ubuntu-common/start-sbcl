@@ -1,0 +1,6 @@
+rlwrap \
+  --prompt-colour=YELLOW \
+  --histsize=100000 \
+  -t "Steel Bank Common Lisp" \
+  --remember \
+  sbcl

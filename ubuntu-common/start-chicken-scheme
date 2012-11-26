@@ -1,0 +1,7 @@
+rlwrap \
+  --command=chicken \
+  --prompt-colour=YELLOW \
+  --histsize=100000 \
+  -t "Chicken Scheme" \
+  --remember \
+  csi

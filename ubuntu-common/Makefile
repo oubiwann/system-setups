@@ -4,13 +4,14 @@ UID = 1000
 GID = 1000
 FSTAB_TEMPLATE = XXX	$(HOME)/XXX	vboxsf	auto,rw,uid=$(UID),gid=$(GID)	0	0
 LOCAL_FSTAB = vbox-fstab
+MY_BIN = $(HOME)/bin
 
 dev:
 	sudo apt-get install \
 build-essential autoconf automake libtool \
 vim vim-common vim-gui-common vim-runtime vim-gtk vim-nox \
-vim-scripts \
-vim-doc
+vim-scripts vim-doc \
+rlwrap
 
 lisp:
 	sudo apt-get install \
@@ -18,15 +19,18 @@ cl-asdf cl-quicklisp cl-cffi cl-getopt cl-ppcre cl-usocket \
 hyperspec \
 sbcl sbcl-doc cl-clx-sbcl \
 ecl
+	cp start-sbcl $(MY_BIN)
 
 scheme:
 	sudo apt-get install \
 chicken-bin libchicken6 libchicken-dev
+	cp start-chicken-scheme $(MY_BIN)
 
 clojure:
 	sudo apt-get install \
 clojure clojure-contrib \
 leiningen
+	cp start-clojure $(MY_BIN)
 
 vbox-tools: dev
 	cd /media/*/VBOX* && ./VBoxLinuxAdditions.run
