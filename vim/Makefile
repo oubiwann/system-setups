@@ -1,14 +1,17 @@
-VIMRC = ~/.vimrc
-GVIMRC = ~/_gvimrc
-VIM = ~/.vim
+REPO_VIMRC = .vimrc
+REPO_GVIMRC = _gvimrc
+REPO_VIM = .vim
+VIMRC = ~/$(REPO_VIMRC)
+GVIMRC = ~/$(REPO_GVIMRC)
+VIM = ~/$(REPO_VIM)
 
 $(VIMRC):
-	cp $(VIMRC) ~/
+	cp $(REPO_VIMRC) ~/
 
 $(GVIMRC):
-	cp $(GVIMRC) ~/
+	cp $(REPO_GVIMRC) ~/
 
 $(VIM):
-	cp -r $(VIM) ~/
+	cp -r $(REPO_VIM) ~/
 
 install: $(VIMRC) $(GVIMRC) $(VIM)

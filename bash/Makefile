@@ -1,6 +1,7 @@
-BASHRC = ~/.bashrc
+REPO_BASHRC = .bashrc
+BASHRC = ~/$(REPO_BASHRC)
 
 $(BASHRC):
-	cp $(BASHRC) ~/
+	cp $(REPO_BASHRC) ~/
 
 install: $(BASHRC)
