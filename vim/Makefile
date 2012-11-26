@@ -3,12 +3,12 @@ GVIMRC = ~/_gvimrc
 VIM = ~/.vim
 
 $(VIMRC):
-	cp .vimrc ~/
+	cp $(VIMRC) ~/
 
 $(GVIMRC):
-	cp _gvimrc ~/
+	cp $(GVIMRC) ~/
 
 $(VIM):
-	cp -r .vim ~/
+	cp -r $(VIM) ~/
 
 install: $(VIMRC) $(GVIMRC) $(VIM)
