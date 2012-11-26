@@ -31,9 +31,13 @@ Or, if you're not me:
   git clone https://github.com/oubiwann/system-setups.git
 
 
-Lubuntu/Awesome Tiling WM
+Lubuntu/CL-FSWM Tiling WM
 -------------------------
+
+These instructions can be applied (with the appropriate substitutions) for
+other targets as well:
 
 .. code:: shell
 
-  cd system-setups/lubuntu-awesome
+  cd system-setups
+  make lubuntu-clfswm
