@@ -14,4 +14,7 @@ lubuntu-clfswm: ubuntu-common bash vim
 	cd ubuntu-common && make lisp
 	cd lubuntu-clfswm && make install
 
+clean:
+	cd ubuntu-common && make clean
+
 .PHONY: ubuntu-common lubuntu-awesome lubuntu-clfswm bash vim
