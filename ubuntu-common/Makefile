@@ -1,6 +1,8 @@
 SHARES = Desktop Documents Downloads Movies Music Pictures bin public_html
 HOME = /home/oubiwann
-FSTAB_TEMPLATE = XXX	$(HOME)/XXX	vboxsf	defaults	0	0
+UID = 1000
+GID = 1000
+FSTAB_TEMPLATE = XXX	$(HOME)/XXX	vboxsf	auto,rw,uid=$(UID),gid=$(GID)	0	0
 LOCAL_FSTAB = vbox-fstab
 
 dev:
@@ -31,7 +33,9 @@ vbox-tools: dev
 
 vbox-fstab-prep:
 	--rmdir $(HOME)/Videos
-	mkdir -p $(HOME)/Movies
+	mkdir -p $(HOME)/Movies; chown $(UID):$(GID) $(HOME)/Movies
+	mkdir -p $(HOME)/bin; chown $(UID):$(GID) $(HOME)/bin
+	mkdir -p $(HOME)/public_html; chown $(UID):$(GID) $(HOME)/public_html
 	-ln -s $(HOME)/Movies $(HOME)/Videos
 
 $(LOCAL_FSTAB):
@@ -39,8 +43,11 @@ $(LOCAL_FSTAB):
 $(shell echo $(subst XXX,$(SHARE), $(FSTAB_TEMPLATE) >> $(LOCAL_FSTAB))))
 
 vbox-update-fstab: vbox-fstab-prep $(LOCAL_FSTAB)
-	cat fstab >> /etc/fstab
+	cat $(LOCAL_FSTAB) >> /etc/fstab
 
 install: dev
+
+clean:
+	rm $(LOCAL_FSTAB)
 
 .PHONY: vbox-shares
