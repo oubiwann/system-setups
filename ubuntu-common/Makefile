@@ -5,6 +5,8 @@ GID = 1000
 FSTAB_TEMPLATE = XXX	$(HOME)/XXX	vboxsf	auto,rw,uid=$(UID),gid=$(GID)	0	0
 LOCAL_FSTAB = vbox-fstab
 MY_BIN = $(HOME)/bin
+LOCAL_SBCLRC = .sbclrc
+SBCLRC = ~/$(LOCAL_SBCLRC)
 
 dev:
 	sudo apt-get install \
@@ -13,7 +15,10 @@ vim vim-common vim-gui-common vim-runtime vim-gtk vim-nox \
 vim-scripts vim-doc \
 rlwrap
 
-lisp:
+$(SBCLRC):
+	cp $(LOCAL_SBCLRC) $(SBCLRC)
+
+lisp: $(SBCLRC)
 	sudo apt-get install \
 cl-asdf cl-quicklisp cl-cffi cl-getopt cl-ppcre cl-usocket \
 hyperspec \
@@ -54,4 +59,4 @@ install: dev
 clean:
 	rm $(LOCAL_FSTAB)
 
-.PHONY: vbox-shares
+.PHONY: lisp scheme clojure vbox-tools vbox-fstab-prep vbox-update-fstab
