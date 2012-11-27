@@ -4,13 +4,16 @@ bash:
 vim:
 	cd vim && make install
 
+backgrounds:
+	cd backgrounds && make install
+
 ubuntu-common:
 	cd ubuntu-common && make install
 
-lubuntu-awesome: ubuntu-common bash vim
+lubuntu-awesome: backgrounds ubuntu-common bash vim
 	cd lubuntu-awesome && make install
 
-lubuntu-clfswm: ubuntu-common bash vim
+lubuntu-clfswm: backgrounds ubuntu-common bash vim
 	cd ubuntu-common && make lisp
 	cd lubuntu-clfswm && make install
 
