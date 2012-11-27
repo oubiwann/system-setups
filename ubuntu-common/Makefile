@@ -5,8 +5,12 @@ GID = 1000
 FSTAB_TEMPLATE = XXX	$(HOME)/XXX	vboxsf	auto,rw,uid=$(UID),gid=$(GID)	0	0
 LOCAL_FSTAB = vbox-fstab
 MY_BIN = $(HOME)/bin
-LOCAL_SBCLRC = .sbclrc
-SBCLRC = ~/$(LOCAL_SBCLRC)
+CURL = /usr/bin/curl
+QUICKLISP = quicklisp.lisp
+SBCLRC = ~/.sbclrc
+
+$(CURL):
+	sudo apt-get install curl
 
 dev:
 	sudo apt-get install \
@@ -15,17 +19,22 @@ vim vim-common vim-gui-common vim-runtime vim-gtk vim-nox \
 vim-scripts vim-doc \
 rlwrap
 
-$(SBCLRC):
-	cp $(LOCAL_SBCLRC) $(SBCLRC)
-
-lisp: $(SBCLRC)
+lisp-deps:
 	sudo apt-get install \
-cl-asdf cl-quicklisp cl-cffi cl-getopt cl-ppcre cl-usocket \
+cl-asdf cl-cffi cl-getopt cl-ppcre cl-usocket \
 hyperspec \
 sbcl sbcl-doc cl-clx-sbcl \
 clisp clisp-module-clx \
 ecl
 	cp start-sbcl $(MY_BIN)
+
+$(QUICKLISP): $(CURL)
+	curl -O http://beta.quicklisp.org/quicklisp.lisp
+
+$(SBCLRC): $(QUICKLISP)
+	sbcl --non-interactive --load setup-quicklisp.lisp
+
+lisp: lisp-deps $(SBCLRC)
 
 scheme:
 	sudo apt-get install \
