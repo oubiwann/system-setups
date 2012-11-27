@@ -20,4 +20,4 @@ lubuntu-clfswm: backgrounds ubuntu-common bash vim
 clean:
 	cd ubuntu-common && make clean
 
-.PHONY: ubuntu-common lubuntu-awesome lubuntu-clfswm bash vim
+.PHONY: backgrounds ubuntu-common lubuntu-awesome lubuntu-clfswm bash vim
