@@ -1,0 +1,4 @@
+#!/bin/bash
+feh --bg-scale  ~/Pictures/backgrounds/desktop/mendocino-2.jpg &
+terminator &
+clfswm sbcl

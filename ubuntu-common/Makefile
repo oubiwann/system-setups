@@ -23,6 +23,7 @@ lisp: $(SBCLRC)
 cl-asdf cl-quicklisp cl-cffi cl-getopt cl-ppcre cl-usocket \
 hyperspec \
 sbcl sbcl-doc cl-clx-sbcl \
+clisp clisp-module-clx \
 ecl
 	cp start-sbcl $(MY_BIN)
 

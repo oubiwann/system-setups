@@ -7,6 +7,9 @@ vim:
 backgrounds:
 	cd backgrounds && make install
 
+fonts:
+	cd fonts && make install
+
 ubuntu-common:
 	cd ubuntu-common && make install
 
@@ -20,4 +23,4 @@ lubuntu-clfswm: backgrounds ubuntu-common bash vim
 clean:
 	cd ubuntu-common && make clean
 
-.PHONY: ubuntu-common lubuntu-awesome lubuntu-clfswm bash vim
+.PHONY: bash vim backgrounds fonts ubuntu-common lubuntu-awesome lubuntu-clfswm

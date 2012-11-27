@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=clfswm (sbcl)
+Encoding=UTF-8
+Comment=A(nother) Common Lisp window manager
+Exec=/home/oubiwann/bin/clfswm-sbcl-custom
+TryExec=clfswm
+Type=XSession
