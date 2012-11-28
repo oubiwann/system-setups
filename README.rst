@@ -2,7 +2,7 @@ system-setups
 =============
 
 Dependencies
-------------
+++++++++++++
 
 First, get the dependencies installed.
 
@@ -32,7 +32,7 @@ Or, if you're not me:
 
 
 Lubuntu/CL-FSWM Tiling WM
--------------------------
++++++++++++++++++++++++++
 
 These instructions can be applied (with the appropriate substitutions) for
 other targets as well:
@@ -52,7 +52,10 @@ logging in with username and password as usual
 
 
 Getting started with CL-FSWM
-____________________________
+----------------------------
+
+Tiling
+______
 
 ``clfswm`` is a "full screen" window manager; it does more than just tiling.
 However, here's how you get started with tiling:
@@ -67,3 +70,11 @@ However, here's how you get started with tiling:
 * At this menu are listed some tiling options that can get you started quickly,
   with or without space around your windows (guess that depends upon how much
   you like your background image!).
+
+Moving Windows/Changing Layouts
+_______________________________
+
+* ``alt+F10`` will alternate between layout options (horizontal and vertical)
+
+* ``shift+ctl+F10`` will go into an expose mode; when you click on a window,
+  that one will take the primary spot (and windows will return to normal)
