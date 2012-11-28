@@ -41,3 +41,21 @@ other targets as well:
 
   cd system-setups
   make lubuntu-clfswm
+
+
+Getting started with CL-FSWM
+____________________________
+
+``clfswm`` is a "full screen" window manager; it does more than just tiling.
+However, here's how you get started with tiling:
+
+* log in to X using clfswm
+
+* go into "second mode" with ``alt+t`` and then access the menu with ``m``
+
+* Then type ``f`` then ``l``  then ``e`` to access the frame layout
+  menu
+
+* At this menu are listed some tiling options that can get you started quickly,
+  with or without space around your windows (guess that depends upon how much
+  you like your background image!).
