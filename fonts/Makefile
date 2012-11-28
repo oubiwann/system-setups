@@ -9,6 +9,7 @@ $(PROGGY): $(FONT_DIR)
 
 fonts:
 	sudo apt-get install \
+ttf-dzongkha \
 fonts-liberation \
 ttf-bitstream-vera ttf-dejavu-extra ttf-dejavu-core ttf-dejavu \
 fonts-ubuntu-font-family-console ttf-ubuntu-font-family \

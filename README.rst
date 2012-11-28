@@ -78,3 +78,6 @@ _______________________________
 
 * ``shift+ctl+F10`` will go into an expose mode; when you click on a window,
   that one will take the primary spot (and windows will return to normal)
+
+* ``alt+<arrow key>`` will swap windows in and out of the primary spot, without
+  having to go into the expose mode
