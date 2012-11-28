@@ -1,8 +1,8 @@
 system-setups
 =============
 
-Getting Started
----------------
+Dependencies
+------------
 
 First, get the dependencies installed.
 
@@ -49,7 +49,7 @@ ____________________________
 ``clfswm`` is a "full screen" window manager; it does more than just tiling.
 However, here's how you get started with tiling:
 
-* log in to X using clfswm
+* log in to X using ``clfswm``
 
 * go into "second mode" with ``alt+t`` and then access the menu with ``m``
 
