@@ -42,6 +42,14 @@ other targets as well:
   cd system-setups
   make lubuntu-clfswm
 
+When that finishes, you will have a ``clfswm`` enabled system on your hands
+(with fonts, scripts, background images, etc.). In order to use this:
+
+* log out of your current session in Lubuntu
+
+* in the login window, select one of the two ``clfswm`` session options,
+logging in with username and password as usual
+
 
 Getting started with CL-FSWM
 ____________________________
