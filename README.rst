@@ -81,3 +81,13 @@ _______________________________
 
 * ``alt+<arrow key>`` will swap windows in and out of the primary spot, without
   having to go into the expose mode
+
+Mac
++++
+
+Dependencies
+------------
+
+* Xcode and commandline tools (App Store)
+
+* git: http://git-scm.com/download/mac
