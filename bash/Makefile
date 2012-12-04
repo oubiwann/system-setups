@@ -1,7 +1,12 @@
 REPO_BASHRC = .bashrc
+REPO_PROFILE = .profile
 BASHRC = ~/$(REPO_BASHRC)
+PROFILE = ~/$(REPO_PROFILE)
 
 $(BASHRC):
 	cp $(REPO_BASHRC) ~/
 
-install: $(BASHRC)
+$(PROFILE):
+	cp $(REPO_PROFILE) ~/
+
+install: $(BASHRC) $(PROFILE)
