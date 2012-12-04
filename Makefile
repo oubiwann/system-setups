@@ -23,4 +23,7 @@ lubuntu-clfswm: backgrounds ubuntu-common bash vim
 clean:
 	cd ubuntu-common && make clean
 
+mac: vim backgrounds bash
+	cd mac && make install
+
 .PHONY: bash vim backgrounds fonts ubuntu-common lubuntu-awesome lubuntu-clfswm
