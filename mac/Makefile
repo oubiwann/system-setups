@@ -9,12 +9,13 @@ $(APP_DIR):
 	mkdir -p $(APP_DIR)/Web
 	mkdir -p $(APP_DIR)/TextAndPub
 	mkdir -p $(APP_DIR)/Graphics
+	mkdir -p $(APP_DIR)/Utilities
 
 $(BREW):
 	ruby -e "$$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 
 $(WGET): $(BREW)
-	brew install $(WGET)
+	brew install wget
 
 downloads: $(WGET) $(APP_DIR)
 	$(WGET) http://downloads.sourceforge.net/iterm/iTerm_0.10.zip
@@ -24,6 +25,7 @@ downloads: $(WGET) $(APP_DIR)
 	$(WGET) "https://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-mozilla-aurora/firefox-19.0a2.en-US.mac.dmg"
 	$(WGET) https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
 	$(WGET) http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1.dmg
+	$(WGET) http://download.virtualbox.org/virtualbox/4.2.4/VirtualBox-4.2.4-81684-OSX.dmg
 	$(WGET) https://github.com/downloads/b4winckler/macvim/MacVim-snapshot-65.tbz
 	mv *.dmg *.zip *.jar ~/Downloads/
 
