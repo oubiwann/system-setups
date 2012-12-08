@@ -48,7 +48,7 @@ leiningen
 	cp start-clojure $(MY_BIN)
 
 vbox-tools: dev
-	cd /media/*/VBOX* && ./VBoxLinuxAdditions.run
+	cd /media/*/VBOX* && sudo ./VBoxLinuxAdditions.run
 
 vbox-fstab-prep:
 	--rmdir $(HOME)/Videos
@@ -62,7 +62,7 @@ $(LOCAL_FSTAB):
 $(shell echo $(subst XXX,$(SHARE), $(FSTAB_TEMPLATE) >> $(LOCAL_FSTAB))))
 
 vbox-update-fstab: vbox-fstab-prep $(LOCAL_FSTAB)
-	cat $(LOCAL_FSTAB) >> /etc/fstab
+	sudo cat $(LOCAL_FSTAB) >> /etc/fstab
 
 install: dev
 
