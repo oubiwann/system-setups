@@ -12,7 +12,13 @@ SBCLRC = ~/.sbclrc
 $(CURL):
 	sudo apt-get install curl
 
-dev:
+dvcs:
+	sudo apt-get install \
+bzr bzrtools bzr-fastimport bzr-git bzr-svn bzr-grep bzr-loom bzr-pipeline \
+subversion \
+hg-fast-export mercurial mercurial-git 
+
+dev: dvcs
 	sudo apt-get install \
 build-essential autoconf automake libtool \
 vim vim-common vim-gui-common vim-runtime vim-gtk vim-nox \
@@ -69,4 +75,4 @@ install: dev
 clean:
 	rm $(LOCAL_FSTAB)
 
-.PHONY: lisp scheme clojure vbox-tools vbox-fstab-prep vbox-update-fstab
+.PHONY: lisp scheme clojure vbox-tools vbox-fstab-prep vbox-update-fstab dvcs
