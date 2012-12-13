@@ -10,3 +10,9 @@ $(PROFILE):
 	cp $(REPO_PROFILE) ~/
 
 install: $(BASHRC) $(PROFILE)
+
+append:
+	cat $(REPO_BASHRC) >> $(BASHRC)
+	cat $(REPO_PROFILE) >> $(PROFILE)
+
+.PHONY: append install
