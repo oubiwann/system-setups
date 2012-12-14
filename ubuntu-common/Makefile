@@ -18,6 +18,10 @@ bzr bzrtools bzr-fastimport bzr-git bzr-svn bzr-grep bzr-loom bzr-pipeline \
 subversion \
 hg-fast-export mercurial mercurial-git 
 
+pythons:
+	sudo apt-get install \
+python-dev python-twisted pypy
+
 dev: dvcs
 	sudo apt-get install \
 build-essential autoconf automake libtool \
@@ -53,6 +57,13 @@ clojure clojure-contrib \
 leiningen
 	cp start-clojure $(MY_BIN)
 
+/usr/local/clojure-py:
+	cd /usr/local && sudo git clone https://github.com/halgari/clojure-py.git
+	cp start-clojure-py $(MY_BIN)
+
+clojure-py: /usr/local/clojure-py
+	sudo apt-get install pypy \
+
 vbox-tools: dev
 	cd /media/*/VBOX* && sudo ./VBoxLinuxAdditions.run
 
@@ -70,9 +81,13 @@ $(shell echo $(subst XXX,$(SHARE), $(FSTAB_TEMPLATE) >> $(LOCAL_FSTAB))))
 vbox-update-fstab: vbox-fstab-prep $(LOCAL_FSTAB)
 	sudo cat $(LOCAL_FSTAB) >> /etc/fstab
 
+install-lisps: lisp scheme clojure clojure-py
+
+install-pythons: pythons
+
 install: dev
 
 clean:
 	rm $(LOCAL_FSTAB)
 
-.PHONY: lisp scheme clojure vbox-tools vbox-fstab-prep vbox-update-fstab dvcs
+.PHONY: lisp scheme clojure vbox-tools vbox-fstab-prep vbox-update-fstab dvcs install-lisps
