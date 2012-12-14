@@ -20,7 +20,7 @@ hg-fast-export mercurial mercurial-git
 
 pythons:
 	sudo apt-get install \
-python-dev python-twisted pypy
+python-dev python-twisted pypy pypy-dev
 
 dev: dvcs
 	sudo apt-get install \
